@@ -5,6 +5,7 @@ const [GITHUB_REPOSITORY_OWNER, GITHUB_REPOSITORY_NAME] =
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("assets");
+  eleventyConfig.addPassthroughCopy("favicon.ico");
   return {
     dir: {
       layouts: "../layouts",
