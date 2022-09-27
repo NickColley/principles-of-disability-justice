@@ -1,168 +1,63 @@
 :root {
-  --text-color: #0b0c0c;
-  --background-color: #f4f3f3;
-  --code-padding: 0.5rem;
-  --grey: #505a5f;
-}
-html {
-  font-family: sans-serif;
-  line-height: 1.5;
-  font-size: 120%;
-  color: var(--text-color);
-  background: var(--background-color);
+  --background-color: #1b1b1b;
+  --text-color: #cbcbcb;
+  --link-color: tomato;
+  --font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  --underline-thickness: 0.0625em;
+  --underline-thickness-hover: 0.14em;
 }
 body {
-  max-width: 50rem;
   margin: 0 auto;
-  padding: 5vh 5vw;
+  padding: 12vh 1.4rem;
+  font-size: clamp(1rem, 0.7333rem + 1.3333vw, 1.4rem);
+  line-height: 1.5;
+  font-family: var(--font-family);
+  max-width: 66ch;
+  background: var(--background-color);
+  color: var(--text-color);
 }
+
+:focus {
+  outline: 0.14em solid;
+  outline-offset: 0.8em;
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  line-height: 1.3;
-  margin-top: 2.5rem;
-  margin-bottom: 0.8rem;
+  font-weight: 900;
+  line-height: 1.25;
 }
+
 h1 {
   margin-top: 0;
-}
-blockquote {
-  border-left: 5px solid var(--grey);
-  margin-left: 0;
-  padding-left: 1rem;
+  margin-bottom: 1.3em;
+  font-size: clamp(2.4rem, 1.0667rem + 6.6667vw, 4.4rem);
 }
 
-p,
-ul,
-ol,
-pre {
-  max-width: 66ch;
-}
-p,
-ul,
-ol,
-pre,
-table {
+h2 {
   margin-top: 0;
-  margin-bottom: 1.5rem;
-}
-ol,
-ul {
-  padding-left: 1rem;
-}
-li {
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.4em;
+  font-size: clamp(1.8rem, 1.4rem + 2vw, 2.4rem);
 }
 
-pre {
-  background: var(--text-color);
-  color: var(--background-color);
-  padding: var(--code-padding);
-  border-radius: 4px;
-}
-pre > code {
-  box-shadow: none;
+p {
+  margin-top: 0;
+  margin-bottom: 3.3em;
 }
 
-code {
-  background: var(--text-color);
-  color: var(--background-color);
-  box-shadow: 0 0 0 calc(var(--code-padding) * 0.5) var(--text-color);
-  border-radius: 2px;
+a {
+  color: var(--link-color);
+  text-decoration: underline;
+  text-decoration-skip-ink: auto;
+  text-underline-offset: 0.125em;
+  text-decoration-thickness: var(--underline-thickness);
 }
 
-table {
-  display: block;
-  width: 100%;
-  width: max-content;
-  max-width: 100%;
-  overflow: auto;
-  border-spacing: 0;
-  border-collapse: collapse;
-}
-
-th,
-td {
-  padding: 6px 13px;
-  border: 1px solid var(--grey);
-}
-
-img {
-  display: block;
-  margin: 0;
-  max-width: 100%;
-}
-
-hr {
-  margin: 0;
-  margin-bottom: 2rem;
-  border: 0;
-  border-top: 1px solid var(--grey);
-}
-
-.contains-task-list {
-  list-style: none;
-  padding-left: 0;
-}
-
-.task-list-item {
-  --checkbox-size: 1.3em;
-  position: relative;
-  margin-bottom: 0.25em;
-  padding-left: calc(var(--checkbox-size) + 0.449999em);
-}
-
-.task-list-item > input[type="checkbox"] {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  left: 0;
-  width: var(--checkbox-size);
-  height: var(--checkbox-size);
-}
-@supports selector(:has()) {
-  /* Hide the original checkbox since we're making our own */
-  .task-list-item > input[type="checkbox"] {
-    width: 1px;
-    height: 1px;
-    margin: 0;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
-    clip-path: inset(50%);
-    white-space: nowrap;
-  }
-
-  .task-list-item:has(> input[type="checkbox"]:first-child)::before,
-  .task-list-item:has(> input[type="checkbox"]:first-child)::after {
-    cursor: not-allowed;
-    content: "";
-    box-sizing: border-box;
-    position: absolute;
-    top: 0;
-    margin: auto;
-  }
-  .task-list-item:has(> input[type="checkbox"]:first-child)::before {
-    bottom: 0;
-    left: 0;
-    width: var(--checkbox-size);
-    height: var(--checkbox-size);
-    border: 0.125em solid;
-    border-radius: 5px;
-  }
-  .task-list-item:has(> input[type="checkbox"]:first-child)::after {
-    bottom: 0.1875em;
-    left: 0.25em;
-    width: 0.8125em;
-    height: 0.4375em;
-    transform: rotate(-45deg);
-    border: solid;
-    border-width: 0 0 0.1875em 0.1875em;
-  }
-  .task-list-item:has(> input[type="checkbox"][checked]:first-child)::after {
-    opacity: 1;
-  }
+a:focus,
+a:hover {
+  text-decoration-thickness: var(--underline-thickness-hover);
 }
