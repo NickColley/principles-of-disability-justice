@@ -5,6 +5,21 @@ title: 10&nbsp;Principles of Disability&nbsp;Justice
 
 # {{ title }}
 
+## Contents
+
+- [Intersectionality](#intersectionality)
+- [Leadership of Those Most Impacted](#leadership-of-those-most-impacted)
+- [Anti-Capitalist Politic](#anti-capitalist-politic)
+- [Commitment to Cross-Movement Organising](#commitment-to-cross-movement-organising)
+- [Recognizing Wholeness](#recognizing-wholeness)
+- [Sustainability](#sustainability)
+- [Commitment to Cross-Disability Solidarity](#commitment-to-cross-disability-solidarity)
+- [Interdependence](#interdependence)
+- [Collective Access](#collective-access)
+- [Collective Liberation](#collective-liberation)
+
+---
+
 ## Intersectionality
 &ldquo;We do not live single issue lives&rdquo; &ndash; Audre Lorde. Ableism, coupled with white supremacy, supported by capitalism, underscored by heteropatriarchy, has rendered the vast majority of the world &lsquo;invalid&rsquo;.
 

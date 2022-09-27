@@ -6,6 +6,17 @@
   --underline-thickness: 0.0625em;
   --underline-thickness-hover: 0.14em;
 }
+::-moz-selection {
+  background: var(--link-color);
+  color: var(--background-color);
+}
+::selection {
+  background: var(--link-color);
+  color: var(--background-color);
+}
+html {
+  scroll-padding: 1.4rem;
+}
 body {
   margin: 0 auto;
   padding: 12vh 1.4rem;
@@ -15,11 +26,6 @@ body {
   max-width: 66ch;
   background: var(--background-color);
   color: var(--text-color);
-}
-
-:focus {
-  outline: 0.14em solid;
-  outline-offset: 0.8em;
 }
 
 h1,
@@ -60,4 +66,31 @@ a {
 a:focus,
 a:hover {
   text-decoration-thickness: var(--underline-thickness-hover);
+}
+
+a:focus {
+  outline: 1px solid transparent;
+  box-shadow: 0 0 0 0.3em var(--link-color);
+  background: var(--link-color);
+  color: var(--background-color);
+}
+
+ul {
+  margin: 0;
+  margin-bottom: 2rem;
+  padding: 0;
+  padding-left: 1.25em;
+}
+ul > li:not(:last-child) {
+  margin-bottom: 0.3rem;
+}
+ul > li::marker {
+  content: '\2014\2002';
+}
+
+hr {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  border: 0;
+  border-top: var(--underline-thickness) solid;
 }

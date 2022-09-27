@@ -8,13 +8,9 @@
     "dotenv": "^8.2.0",
     "rehype-format": "^3.1.0",
     "rehype-stringify": "^8.0.0",
-    "remark-breaks": "^2.0.2",
-    "remark-emoji": "^2.2.0",
-    "remark-footnotes": "^3.0.0",
-    "remark-gfm": "^1.0.0",
-    "remark-github": "^10.1.0",
     "remark-parse": "^9.0.0",
     "remark-rehype": "^8.1.0",
+    "remark-slug": "^4.2.3",
     "unified": "^9.2.2"
   },
   "engines": {
