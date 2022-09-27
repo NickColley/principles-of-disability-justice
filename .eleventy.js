@@ -1,14 +1,12 @@
-const { GITHUB_REPOSITORY_NAME } = require("./lib/constants.js");
-const markdown = require("./lib/markdown.js");
+const { GITHUB_REPOSITORY } = process.env;
+
+const [GITHUB_REPOSITORY_OWNER, GITHUB_REPOSITORY_NAME] =
+  GITHUB_REPOSITORY.split("/");
 
 module.exports = function (eleventyConfig) {
-  eleventyConfig.setLibrary("md", {
-    render: (content) => markdown(content),
-  });
   eleventyConfig.addPassthroughCopy("assets");
   return {
     dir: {
-      data: "../data",
       layouts: "../layouts",
       input: "./pages",
     },
