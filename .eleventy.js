@@ -37,7 +37,6 @@ module.exports = function (eleventyConfig) {
     render: (content) => markdown(content),
   });
   eleventyConfig.addPassthroughCopy("assets");
-  eleventyConfig.addPassthroughCopy("favicon.ico");
   return {
     dir: {
       layouts: "../layouts",
