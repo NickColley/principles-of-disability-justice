@@ -1,6 +1,6 @@
 ---
 layout: base.njk
-title: 10&nbsp;Principles of Disability&nbsp;Justice
+title: Sins&nbsp;Invalid 10&nbsp;Principles of Disability&nbsp;Justice
 ---
 
 # {{ title }}
